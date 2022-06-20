@@ -57,7 +57,9 @@ public class HbnRun {
     public static void selectByName(String name, Session session) {
         Query query = session.createQuery("from Candidate c where c.name=:selectName");
         query.setParameter("selectName", name);
-        System.out.println(query.uniqueResult());
+        for (Object st : query.list()) {
+            System.out.println(st);
+        }
     }
 
     public static void selectById(int id, Session session) {
