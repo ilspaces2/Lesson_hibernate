@@ -14,5 +14,7 @@
         <property name="hibernate.hbm2ddl.auto">update</property>
         <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQL10Dialect</property>
         <mapping class="ru.job4j.hql.Candidate"/>
+        <mapping class="ru.job4j.onetomany.Car"/>
+        <mapping class="ru.job4j.onetomany.Model"/>
     </session-factory>
 </hibernate-configuration>
